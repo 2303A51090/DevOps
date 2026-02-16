@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -15,7 +16,9 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: 16/02/26
         run: npm install
 
       - name: Run integration tests
+        working-directory: 16/02/26
         run: npm test
