@@ -16,9 +16,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: 16/02/26
         run: npm install
 
       - name: Run integration tests
-        working-directory: 16/02/26
         run: npm test
